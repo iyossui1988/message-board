@@ -12,22 +12,23 @@
     </div>
 </div>
 
-<form class="form-inline">
-  <%= form_for(@message) do |f| %>
+  <%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
     <div class="form-group"> 
-      <名前>
-      <br>
-      <%= f.text_area :name, :size => "20×10", :value=>"名前を入力" %>
-      <br>
+      <label for="message_name" class="control-label col-md-2">名前:</label>
+      <div class="col-md-4">
+        <%= f.text_field :name, :class=>"form-control", :size => "20×10", :value=>"名前を入力" %>
+      </div>  
     </div>
     <div class="form-group"> 
-      <内容>
-      <br>
-      <%= f.text_area :body, :size => "60×10", :value=>"メッセージを入力" %>
-      <br>
+      <label for="message_name" class="control-label col-md-2">内容:</label>
+      <div class="col-md-4">
+        <%= f.text_area :body, :class=>"form-control",  :size => "60×10", :value=>"メッセージを入力" %>
+      </div>
     </div>  
     <div class="form-group"> 
-      <%= f.submit class:"btn btn-sm btn-primary" %>
+      <div class="col-sm-offset-2 col-md-4">
+        <%= f.submit class:"btn btn-sm btn-primary"%>
+      </div>
     </div>
 </form>
 
